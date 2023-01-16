@@ -6,9 +6,12 @@ import Blog from "./Blog";
 function Blogs() {
   const [blogs, setBlogs] = useState();
 
+  const BASE_URL = "https://blog-app-mern.vercel.app";
+
+
   // fetch the all blog data
   const fetchBlogData = async () => {
-    const resp = await axios.get(`/api/blog/`);
+    const resp = await axios.get(`${BASE_URL}/api/blog/`);
     if (resp.data.blogs.length > 0) {
       setBlogs(resp.data.blogs);
     }

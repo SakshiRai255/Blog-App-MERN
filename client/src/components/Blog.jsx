@@ -16,6 +16,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Blog({ title, description, image, userName, time, isUser, id }) {
+
+  const BASE_URL = "https://blog-app-mern.vercel.app";
+
   const navigate = useNavigate();
 
   // Blog Edit function
@@ -26,7 +29,7 @@ function Blog({ title, description, image, userName, time, isUser, id }) {
   // delete blog data request
 
   const deleteRequest = async () => {
-    const deleteBlog = await axios.delete(`/api/blog/${id}`);
+    const deleteBlog = await axios.delete(`${BASE_URL}/api/blog/${id}`);
   };
 
   // Blog Delete function

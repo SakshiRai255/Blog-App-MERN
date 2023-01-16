@@ -4,6 +4,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function AddBlog() {
+
+  const BASE_URL = "https://blog-app-mern.vercel.app";
+
   const labelStyles = { mb: 1, mt: 2, fontSize: "20px", fontWeight: "bold" };
 
   const navigate = useNavigate();
@@ -32,7 +35,7 @@ function AddBlog() {
       user:localStorage.getItem("userId")
     };
 
-    const result = await axios.post(`/api/blog/add`, blogData)
+    const result = await axios.post(`${BASE_URL}/api/blog/add`, blogData)
       .catch((error) => console.log(error));
 
       const data = await result.data

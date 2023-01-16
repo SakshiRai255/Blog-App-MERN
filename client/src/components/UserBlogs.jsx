@@ -7,9 +7,11 @@ function UserBlogs() {
   const id = localStorage.getItem("userId");
   const [user, setUser] = useState();
 
+  const BASE_URL = "https://blog-app-mern.vercel.app";
+
   // fetching blogs by id
   const fetchBlogData = async () => {
-    const resp = await axios.get(`/api/blog/user/${id}`);
+    const resp = await axios.get(`${BASE_URL}/api/blog/user/${id}`);
     if (resp.data.user.blogs.length > 0) {
       setUser(resp.data.user);
     }

@@ -7,6 +7,9 @@ function BlogDetail() {
 
   const navigate = useNavigate();
 
+  const BASE_URL = "https://blog-app-mern.vercel.app";
+
+
   const labelStyles = { mb: 1, mt: 2, fontSize: "20px", fontWeight: "bold" };
   const id = useParams().id;
   const [blogs, setBlogs] = useState();
@@ -22,7 +25,7 @@ function BlogDetail() {
 
   // Fetching the deatils of blog
   const fetchDetails = async () => {
-    const result = await axios.get(`/api/blog/${id}`);
+    const result = await axios.get(`${BASE_URL}/api/blog/${id}`);
 
     const data = await result.data;
     return data;

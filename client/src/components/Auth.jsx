@@ -7,6 +7,9 @@ import { useDispatch } from "react-redux";
 import { authActions, authActionsSignup } from "./store";
 
 function Auth() {
+
+  const BASE_URL = "https://blog-app-mern.vercel.app";
+
   // Format of user Register
   const initialState = {
     name: "",
@@ -38,7 +41,7 @@ function Auth() {
       password: inputs.password,
     };
 
-    const result = await axios.post(`/api/user/${type}`, userData)
+    const result = await axios.post(`${BASE_URL}/api/user/${type}`, userData)
       .catch((error) => console.log(error));
 
       const data = await result.data
