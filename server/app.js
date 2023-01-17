@@ -10,11 +10,6 @@ dotenv.config();
 
 const app = express();
 
-
-// to serve images for public
-app.use(express.static('public'));
-app.use('/images',express.static("images"));
-
 app.use(cors());
 
 app.use(express.json());
