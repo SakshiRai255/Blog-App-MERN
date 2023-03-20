@@ -22,7 +22,7 @@ function Header() {
   return (
     <AppBar sx={{ backgroundColor: "#1e8185" }} position="sticky">
       <Toolbar>
-        <Typography variant="h5">Blogs App</Typography>
+        <Typography variant="h5">UPICON App</Typography>
         {isLoggedIn && (
           <Box display="flex" marginLeft={"auto"} marginRight={"auto"}>
             <Tabs
@@ -30,9 +30,9 @@ function Header() {
               value={value}
               onChange={(value) => setValue(value)}
             >
-              <Tab LinkComponent={Link} to="/blogs" label="All blog" />
-              <Tab LinkComponent={Link} to="/myBlogs" label="My blogs" />
-              <Tab LinkComponent={Link} to="/blogs/add" label="Add Blog" />
+              <Tab LinkComponent={Link} to="/blogs" label="All Data" />
+              <Tab LinkComponent={Link} to="/myBlogs" label="My Data" />
+              <Tab LinkComponent={Link} to="/blogs/add" label="Add Data" />
             </Tabs>
           </Box>
         )}
