@@ -4,7 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { authActions, authActionsSignup } from "./store";
+import { authActions, autctionsSignup } from "./store";
 
 function Auth() {
 
@@ -118,7 +118,7 @@ function Auth() {
             onClick={() => setIsSignup(!isSignup)}
             sx={{ borderRadius: 3, marginTop: 2 }}
           >
-            Change To {isSignup ? "Login" : "Signup"}
+            Change To {isSignup ? "Signup" : "Login"}
           </Button>
         </Box>
       </form>
