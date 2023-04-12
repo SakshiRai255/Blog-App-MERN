@@ -49,7 +49,7 @@ const sendRequest = async() =>{
     title : inputs.title,
     description : inputs.description
   }
-  const resp = await axios.put(`/api/blog/update/${id}`,updatedData);
+  const resp = await axios.put(`${BASE_URL}/api/blog/update/${id}`,updatedData);
 }
 
 
