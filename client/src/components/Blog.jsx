@@ -23,7 +23,7 @@ function Blog({ title, description, image, userName, time, isUser, id }) {
 
   // Blog Edit function
   const handleEdit = (e) => {
-    navigate(`/myBlogs/${id}`);
+    navigate(`${BASE_URL}/api/blog/update/${id}`); 
   };
 
   // delete blog data request

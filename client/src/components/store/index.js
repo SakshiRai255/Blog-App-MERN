@@ -16,6 +16,8 @@ const authSlice = createSlice({
         },
     },
 })
+
+
 const authSignup = createSlice({
     name : "auth",
     initialState:{isLoggedIn : false},
